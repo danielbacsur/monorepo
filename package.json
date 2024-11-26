@@ -1,5 +1,8 @@
 {
   "name": "@danielbacsur/monorepo",
   "version": "0.0.0",
-  "private": true
+  "private": true,
+  "workspaces": [
+    "apps/personal-portfolio-website"
+  ]
 }
