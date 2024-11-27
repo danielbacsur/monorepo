@@ -17,7 +17,7 @@ export default function Page() {
       <section className="max-w-xl space-y-4">
         <section className="space-y-4">
           <p className="text-justify">
-            My name is Daniel Bacsur, and I'm a {age}-year-old student and over
+            My name is Daniel Bacsur, and I&apos;m a {age}-year-old student and over
             the years, I worked on numerous projects. I have participated in
             over 25 competitions and more than 10 hackathons, securing 27
             victories and podium finishes.
