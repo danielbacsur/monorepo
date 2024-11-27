@@ -14,6 +14,7 @@ export default function Page() {
           alt="Hero Banner"
           layout="fill"
           objectFit="cover"
+          objectPosition="50% 20%"
           className="z-0"
         />
 
@@ -203,6 +204,7 @@ export default function Page() {
       />
 
       <div className="h-[25dvh] pointer-events-none" />
+      
       <section className="px-4 py-3 overflow-hidden">
         <div className="max-w-2xl mx-auto">
           <p className="text-justify">
