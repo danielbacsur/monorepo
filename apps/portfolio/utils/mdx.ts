@@ -30,7 +30,7 @@ function getMDXData(dir: string) {
     return {
       slug,
       content,
-      metadata,
+      ...metadata,
     };
   });
 }
