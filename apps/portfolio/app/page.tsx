@@ -1,11 +1,13 @@
 import { AnimatedGallery } from "@/components/animated-gallery";
 import Image from "next/image";
+import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 
 export default function Page() {
   const age = Math.floor(
     (new Date().getTime() - new Date("2005-07-21").getTime()) / 31557600000
   );
+
   return (
     <main>
       <section className="relative h-[80vh] mb-16">
@@ -18,6 +20,64 @@ export default function Page() {
         />
 
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black z-10" />
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+          <div className="flex items-center gap-6">
+            <Link
+              href="https://www.instagram.com/danielbacsur"
+              className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src="/instagram.svg" alt="Logo" width={20} height={20} />
+            </Link>
+
+            <Link
+              href="https://www.linkedin.com/in/danielbacsur"
+              className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src="/linkedin.svg" alt="Logo" width={20} height={20} />
+            </Link>
+
+            <Link
+              href="https://www.facebook.com/profile.php?id=100069574172484"
+              className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src="/facebook.svg" alt="Logo" width={20} height={20} />
+            </Link>
+
+            <Link
+              href="https://github.com/danielbacsur"
+              className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src="/github.svg" alt="Logo" width={20} height={20} />
+            </Link>
+
+            <Link
+              href="https://www.youtube.com/@danielbacsur"
+              className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src="/youtube.svg" alt="Logo" width={20} height={20} />
+            </Link>
+
+            <Link
+              href="https://x.com/danielbacsur"
+              className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src="/x.svg" alt="Logo" width={20} height={20} />
+            </Link>
+          </div>
+        </div>
       </section>
 
       <section className="px-4 py-3 overflow-hidden">
