@@ -12,10 +12,9 @@ export default function Page() {
         <Image
           src="/cypher-otio-live-demo.jpg"
           alt="Hero Banner"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="50% 20%"
-          className="z-0"
+          fill
+          style={{ objectPosition: "50% 20%" }}
+          className="object-cover"
         />
 
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black z-10" />
@@ -204,7 +203,7 @@ export default function Page() {
       />
 
       <div className="h-[25dvh] pointer-events-none" />
-      
+
       <section className="px-4 py-3 overflow-hidden">
         <div className="max-w-2xl mx-auto">
           <p className="text-justify">
