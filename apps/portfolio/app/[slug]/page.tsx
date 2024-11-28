@@ -19,3 +19,27 @@ export default async function Page({
     </article>
   );
 }
+
+export async function generateStaticParams() {
+  const articles = getArticles();
+
+  return articles.map((article) => ({
+    slug: article.slug,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
+  const article = getArticles().find((article) => article.slug === slug);
+
+  if (!article) return;
+
+  return {
+    title: article.title,
+  };
+}
