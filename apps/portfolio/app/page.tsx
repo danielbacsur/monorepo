@@ -130,7 +130,7 @@ export default function Page() {
             Art, dance, and music have always been important to me. However, in
             fifth grade, I had the opportunity to play the lead role in the
             Hungarian State Opera House&apos;s production of Billy Elliot — the
-            largest children's role in the world — which marked a major turning
+            largest children&apos;s role in the world — which marked a major turning
             point in my life. For a little over three years, I trained more than
             40 hours a week, learning dance, singing, guitar, and, not least,
             performance techniques and speech skills. Looking back, I&apos;m
@@ -195,7 +195,7 @@ export default function Page() {
         <div className="max-w-2xl mx-auto">
           <p className="text-justify">
             After the World Championship, I founded my first student
-            business—since, in compliance with Hungarian laws, I couldn't
+            business—since, in compliance with Hungarian laws, I couldn&apos;t
             establish a real LLC yet—in which my classmates and I managed
             everything from production to the sale of our products. We encased
             ceramic planters with abstract 3D silicone molds that I designed,
@@ -288,7 +288,7 @@ export default function Page() {
         <div className="max-w-2xl mx-auto">
           <p className="text-justify">
             Meanwhile, I was also working on another project. At the beginning
-            of the year, I realized that Hungary's education system is short of
+            of the year, I realized that Hungary&apos;s education system is short of
             16,000 teachers and that a reliable and friendly AI model could help
             solve this problem. This led me to develop Sophie, the world&apos;s
             first virtual teacher, with whom students could have spoken
