@@ -3,8 +3,13 @@ import path from "path";
 import matter from "gray-matter";
 
 type Metadata = {
+  id: string;
   title: string;
-  date: string;
+  description: string;
+  tags: string[];
+  technologies: string[];
+  startDate: Date;
+  endDate: Date;
 };
 
 function parseFrontmatter(fileContent: string) {
@@ -21,20 +26,18 @@ function readMDXFile(filePath: string) {
   return parseFrontmatter(rawContent);
 }
 
-function getMDXData(dir: string) {
+export function getProjects() {
+  const dir = path.join(process.cwd(), "projects");
   const mdxFiles = getMDXFiles(dir);
   return mdxFiles.map((file) => {
     const { metadata, content } = readMDXFile(path.join(dir, file));
-    const slug = path.basename(file, path.extname(file));
+
+    metadata.startDate = new Date(metadata.startDate);
+    metadata.endDate = new Date(metadata.endDate);
 
     return {
-      slug,
       content,
       ...metadata,
     };
   });
-}
-
-export function getArticles() {
-  return getMDXData(path.join(process.cwd(), "articles"));
 }
