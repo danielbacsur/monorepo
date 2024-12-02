@@ -7,8 +7,8 @@ interface Contribution {
 
 interface ContributionCalendarProps {
   contributions: Contribution[];
-  start: Date;
-  end: Date;
+  start?: Date;
+  end?: Date;
 }
 
 export function ContributionCalendar({
@@ -92,21 +92,35 @@ export function ContributionCalendar({
   }
 
   return (
-    <div className="w-full overflow-hidden">
-      <div className="grid grid-cols-[repeat(53,1fr)] gap-[2px]">
-        {weeks.map((week, weekIndex) => (
-          <div key={weekIndex} className="grid grid-rows-7 gap-[2px]">
-            {week.map((day, dayIndex) => (
-              <div
-                key={dayIndex}
-                className="aspect-square rounded-sm"
-                style={{ backgroundColor: getColor(day) }}
-                title={`${day.date.toDateString()} - ${day.commits} commits`}
-              />
-            ))}
-          </div>
-        ))}
+    <>
+      <div className="w-full overflow-hidden">
+        <div className="grid grid-cols-[repeat(53,1fr)] gap-[2px]">
+          {weeks.map((week, weekIndex) => (
+            <div key={weekIndex} className="grid grid-rows-7 gap-[2px]">
+              {week.map((day, dayIndex) => (
+                <div
+                  key={dayIndex}
+                  className="aspect-square rounded-sm"
+                  style={{ backgroundColor: getColor(day) }}
+                  title={`${day.date.toDateString()} - ${day.commits} commits`}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+
+      <div className="flex justify-between items-center mt-2 text-sm text-gray-400 opacity-70">
+        <span>{start.toDateString()}</span>
+        <span>
+          ~
+          {Math.floor(
+            (end.getTime() - start.getTime()) / (1000 * 60 * 60 * 10)
+          )}{" "}
+          hours
+        </span>
+        <span>{end.toDateString()}</span>
+      </div>
+    </>
   );
 }

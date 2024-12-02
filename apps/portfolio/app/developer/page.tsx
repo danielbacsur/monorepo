@@ -30,24 +30,7 @@ export default async function Developer() {
           <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Contribution Activity
           </h2>
-          <div className="w-full">
-            <ContributionCalendar contributions={contributions} />
-            <div className="flex justify-between items-center mt-2 text-sm text-gray-400 opacity-70">
-              <span>{contributions[0].date.toDateString()}</span>
-              <span>
-                ~
-                {Math.floor(
-                  (contributions[contributions.length - 1].date.getTime() -
-                    contributions[0].date.getTime()) /
-                    (1000 * 60 * 60 * 10)
-                )}{" "}
-                hours • 20k lines
-              </span>
-              <span>
-                {contributions[contributions.length - 1].date.toDateString()}
-              </span>
-            </div>
-          </div>
+          <ContributionCalendar contributions={contributions} />
         </section>
 
         <section className="mb-12">
