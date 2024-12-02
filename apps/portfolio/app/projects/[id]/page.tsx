@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getProjects } from "@/utils/mdx";
 import { ContributionCalendar } from "@/components/contribution-calendar";
 import { getContributions } from "@/utils/github";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 const contributions = await getContributions();
 
@@ -49,6 +50,15 @@ export default async function ProjectPage({
             start={project.startDate}
             end={project.endDate}
           />
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">
+            Project Details
+          </h2>
+          <div className="markdown">
+            <MDXRemote source={project.content} />
+          </div>
         </section>
       </div>
     </main>
