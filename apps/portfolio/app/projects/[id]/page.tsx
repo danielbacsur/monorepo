@@ -42,9 +42,6 @@ export default async function ProjectPage({
         </header>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">
-            Project Timeline
-          </h2>
           <ContributionCalendar
             contributions={contributions}
             start={project.startDate}
@@ -52,13 +49,8 @@ export default async function ProjectPage({
           />
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">
-            Project Details
-          </h2>
-          <div className="markdown">
-            <MDXRemote source={project.content} />
-          </div>
+        <section className="markdown">
+          <MDXRemote source={project.content} />
         </section>
       </div>
     </main>
