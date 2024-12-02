@@ -3,8 +3,15 @@ import { getContributions } from "@/utils/github";
 import { getProjects } from "@/utils/mdx";
 import Link from "next/link";
 
-const projects = getProjects();
 const contributions = await getContributions();
+const projects = getProjects().sort((a, b) => {
+  const endDateComparison =
+    new Date(b.endDate).getTime() - new Date(a.endDate).getTime();
+
+  if (endDateComparison !== 0) return endDateComparison;
+
+  return new Date(b.startDate).getTime() - new Date(a.startDate).getTime();
+});
 
 export default async function Developer() {
   return (
