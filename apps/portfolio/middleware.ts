@@ -6,19 +6,22 @@ export function middleware(request: NextRequest) {
 
   if (hostname?.includes("danielbacsur.com")) {
     return NextResponse.redirect(
-      new URL("https://danielbacsur.com/personal"),
+      new URL("https://danielbacsur.com/personal-portfolio"),
       301
     );
   }
 
   if (hostname?.includes("danielbacsur.dev")) {
     return NextResponse.redirect(
-      new URL("https://danielbacsur.com/developer"),
+      new URL("https://danielbacsur.com/developer-portfolio"),
       301
     );
   }
 
-  return NextResponse.redirect(new URL("/personal", request.url), 301);
+  return NextResponse.redirect(
+    new URL("/personal-portfolio", request.url),
+    301
+  );
 }
 
 export const config = {
