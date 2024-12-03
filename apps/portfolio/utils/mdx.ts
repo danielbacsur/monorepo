@@ -7,7 +7,6 @@ type Metadata = {
   title: string;
   description: string;
   tags: string[];
-  technologies: string[];
   startDate: Date;
   endDate: Date;
 };
