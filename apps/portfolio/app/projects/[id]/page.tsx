@@ -4,7 +4,9 @@ import { ContributionCalendar } from "@/components/contribution-calendar";
 import { getContributions } from "@/utils/github";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
-const contributions = await getContributions();
+export const revalidate = 3600;
+
+const projects = getProjects();
 
 export default async function ProjectPage({
   params,
@@ -13,7 +15,8 @@ export default async function ProjectPage({
 }) {
   const { id } = await params;
 
-  const project = getProjects().find((p) => p.id === id);
+  const project = projects.find((p) => p.id === id);
+  const contributions = await getContributions();
 
   if (!project) {
     notFound();
@@ -28,11 +31,6 @@ export default async function ProjectPage({
             {project.tags.map((tag, index) => (
               <span key={index} className="text-sm px-2 py-1">
                 {tag}
-              </span>
-            ))}
-            {project.technologies.map((tech, index) => (
-              <span key={index} className="text-sm px-2 py-1">
-                {tech}
               </span>
             ))}
           </div>

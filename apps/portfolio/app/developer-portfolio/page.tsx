@@ -3,7 +3,8 @@ import { getContributions } from "@/utils/github";
 import { getProjects } from "@/utils/mdx";
 import Link from "next/link";
 
-const contributions = await getContributions();
+export const revalidate = 3600;
+
 const projects = getProjects().sort((a, b) => {
   const endDateComparison =
     new Date(b.endDate).getTime() - new Date(a.endDate).getTime();
@@ -14,6 +15,8 @@ const projects = getProjects().sort((a, b) => {
 });
 
 export default async function Developer() {
+  const contributions = await getContributions();
+
   return (
     <main className="px-8 py-24">
       <div className="max-w-3xl mx-auto">
@@ -57,11 +60,6 @@ export default async function Developer() {
                   {project.tags.map((tag, tagIndex) => (
                     <span key={tagIndex} className="text-xs px-2 py-1">
                       {tag}
-                    </span>
-                  ))}
-                  {project.technologies.map((technology, technologyIndex) => (
-                    <span key={technologyIndex} className="text-xs px-2 py-1">
-                      {technology}
                     </span>
                   ))}
                 </div>
