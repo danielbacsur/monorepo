@@ -13,7 +13,7 @@ interface ContributionCalendarProps {
 
 export function ContributionCalendar({
   contributions,
-  start = new Date(new Date().setFullYear(new Date().getFullYear() - 1)),
+  start = new Date(new Date().setDate(new Date().getDate() - 364)),
   end = new Date(),
 }: ContributionCalendarProps) {
   contributions = contributions.filter((c) => {
