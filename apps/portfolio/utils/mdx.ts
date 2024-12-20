@@ -31,8 +31,8 @@ export function getProjects() {
   return mdxFiles.map((file) => {
     const { metadata, content } = readMDXFile(path.join(dir, file));
 
-    metadata.startDate = new Date(metadata.startDate);
-    metadata.endDate = new Date(metadata.endDate);
+    metadata.startDate = new Date(metadata.startDate || new Date());
+    metadata.endDate = new Date(metadata.endDate || new Date());
 
     return {
       content,
