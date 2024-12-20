@@ -5,11 +5,11 @@ import { getContributions } from "@/utils/github";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 export const revalidate = 3600;
-export const dynamicParams = false; 
-
-const projects = getProjects();
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
+  const projects = getProjects();
+
   return projects.map((project) => ({
     id: project.id,
   }));
@@ -22,6 +22,7 @@ export async function generateMetadata({
 }) {
   const { id } = await params;
 
+  const projects = getProjects();
   const project = projects.find((p) => p.id === id);
 
   if (!project) return;
@@ -39,6 +40,7 @@ export default async function ProjectPage({
 }) {
   const { id } = await params;
 
+  const projects = getProjects();
   const project = projects.find((p) => p.id === id);
   const contributions = await getContributions();
 
