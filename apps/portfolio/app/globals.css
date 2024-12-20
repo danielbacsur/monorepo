@@ -4,6 +4,10 @@
 
 @layer base {
   .markdown p {
-    @apply mb-4 text-justify;
+    @apply w-full my-4 text-justify;
+  }
+
+  .markdown iframe {
+    @apply w-full my-8 aspect-video rounded-md;
   }
 }
