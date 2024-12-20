@@ -28,11 +28,17 @@ export default async function Developer() {
             <span className="text-sm px-2 py-1">Draper University Alumni</span>
             <span className="text-sm px-2 py-1">Based in Hungary</span>
           </div>
-          <p className="text-gray-300 mb-6 text-justify">
-            Passionate AI/ML engineer with a strong background in full-stack
-            development. Specializing in creating innovative solutions that
-            bridge the gap between cutting-edge AI technologies and practical,
-            user-centric applications.
+          <p className="text-gray-300 mb-2 text-justify">
+            AI/ML engineer with a strong background in full-stack development.{" "}
+            Specializing in creating innovative solutions that bridge the gap
+            between cutting-edge AI technologies and practical, user-centric
+            applications. Want to know more about me personally?{" "}
+            <Link
+              href="/personal-portfolio"
+              className="text-blue-400 hover:text-blue-300 transition-all duration-300"
+            >
+              Visit my personal site ↗
+            </Link>
           </p>
         </header>
 

@@ -130,12 +130,13 @@ export default function Page() {
             Art, dance, and music have always been important to me. However, in
             fifth grade, I had the opportunity to play the lead role in the
             Hungarian State Opera House&apos;s production of Billy Elliot — the
-            largest children&apos;s role in the world — which marked a major turning
-            point in my life. For a little over three years, I trained more than
-            40 hours a week, learning dance, singing, guitar, and, not least,
-            performance techniques and speech skills. Looking back, I&apos;m
-            deeply grateful for this experience, as it continues to enrich my
-            life even today, shaping me into a better entrepreneur and person.
+            largest children&apos;s role in the world — which marked a major
+            turning point in my life. For a little over three years, I trained
+            more than 40 hours a week, learning dance, singing, guitar, and, not
+            least, performance techniques and speech skills. Looking back,
+            I&apos;m deeply grateful for this experience, as it continues to
+            enrich my life even today, shaping me into a better entrepreneur and
+            person.
           </p>
         </div>
       </section>
@@ -169,7 +170,13 @@ export default function Page() {
             electric guitar. After winning the national round in the spring, we
             advanced to the international competition, where, after three days
             of challenges, the jury unanimously awarded us the World
-            Championship title for Best Hardware in the OnStage category.
+            Championship title for Best Hardware in the OnStage category.{" "}
+            <Link
+              href="/projects/robocup-junior-onstage"
+              className="text-blue-400 hover:text-blue-300 transition-all duration-300"
+            >
+              Read more ↗
+            </Link>
           </p>
         </div>
       </section>
@@ -262,7 +269,13 @@ export default function Page() {
             the world&apos;s first self-driving wheelchair. We began development
             in January, achieved fully autonomous indoor navigation by March,
             patented our technology in April, and continued working on
-            implementing outdoor navigation over the summer.
+            implementing outdoor navigation over the summer.{" "}
+            <Link
+              href="/projects/farfler"
+              className="text-blue-400 hover:text-blue-300 transition-all duration-300"
+            >
+              Read more ↗
+            </Link>
           </p>
         </div>
       </section>
@@ -288,14 +301,20 @@ export default function Page() {
         <div className="max-w-2xl mx-auto">
           <p className="text-justify">
             Meanwhile, I was also working on another project. At the beginning
-            of the year, I realized that Hungary&apos;s education system is short of
-            16,000 teachers and that a reliable and friendly AI model could help
-            solve this problem. This led me to develop Sophie, the world&apos;s
-            first virtual teacher, with whom students could have spoken
-            conversations, and she would respond based on the Hungarian
+            of the year, I realized that Hungary&apos;s education system is
+            short of 16,000 teachers and that a reliable and friendly AI model
+            could help solve this problem. This led me to develop Sophie, the
+            world&apos;s first virtual teacher, with whom students could have
+            spoken conversations, and she would respond based on the Hungarian
             curriculum. Currently, at the time of writing this article, I have
             helped over 5,000 students and am in negotiations with the Hungarian
-            government regarding a potential acquisition.
+            government regarding a potential acquisition.{" "}
+            <Link
+              href="/projects/oktatas-ai"
+              className="text-blue-400 hover:text-blue-300 transition-all duration-300"
+            >
+              Read more ↗
+            </Link>
           </p>
         </div>
       </section>
