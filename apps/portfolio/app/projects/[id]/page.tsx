@@ -3,6 +3,7 @@ import { getProjects } from "@/utils/mdx";
 import { ContributionCalendar } from "@/components/contribution-calendar";
 import { getContributions } from "@/utils/github";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import { Metadata } from "next";
 
 export const revalidate = 3600;
 export const dynamicParams = false;
@@ -30,7 +31,8 @@ export async function generateMetadata({
   return {
     title: project.title,
     description: project.description,
-  };
+    keywords: project.keywords,
+  } as Metadata;
 }
 
 export default async function ProjectPage({

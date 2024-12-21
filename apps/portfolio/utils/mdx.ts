@@ -7,6 +7,7 @@ type Metadata = {
   title: string;
   description: string;
   tags: string[];
+  keywords: string[];
   startDate: Date;
   endDate: Date;
 };
