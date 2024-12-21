@@ -89,10 +89,17 @@ export default function Page() {
       <section className="px-4 py-3 overflow-hidden">
         <div className="max-w-2xl mx-auto">
           <p className="text-justify">
-            My name is Daniel Bacsur, and I&apos;m a {age}-year-old student and
-            over the years, I worked on numerous projects. I have participated
-            in over 25 competitions and more than 10 hackathons, securing 27
-            victories and podium finishes.
+            I&apos;m a {age}-year-old student and passionate innovator. Over the
+            years, I&apos;ve tackled numerous projects, competed in 25+
+            competitions, and attended over 10 hackathons, securing 27 victories
+            and podium finishes. Below, you can read more about me as a person,
+            but if you&apos;re here for my professional work, check out my{" "}
+            <Link
+              href="/developer-portfolio"
+              className="text-blue-400 hover:text-blue-300 transition-all duration-300"
+            >
+              developer portfolio ↗
+            </Link>
           </p>
         </div>
       </section>
@@ -181,7 +188,7 @@ export default function Page() {
               href="/projects/robocup-junior-onstage"
               className="text-blue-400 hover:text-blue-300 transition-all duration-300"
             >
-              Read more ↗
+              Watch the performance ↗
             </Link>
           </p>
         </div>
