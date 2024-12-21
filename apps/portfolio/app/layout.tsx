@@ -1,5 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
+import font from "next/font/local";
+import { cn } from "@/utils/cn";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -12,6 +14,13 @@ export const metadata: Metadata = {
   keywords: ["daniel bacsur", "bacsur daniel", "bacsur", "daniel", "dániel"],
 };
 
+
+
+const signatureFont = font({
+  src: "../fonts/signature.ttf",
+  variable: "--font-signature",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,7 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="antialiased bg-black text-white min-h-dvh">
+      <body
+        className={cn(
+          "antialiased bg-black text-white min-h-dvh",
+          signatureFont.variable
+        )}
+      >
         <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
         </ThemeProvider>

@@ -19,6 +19,12 @@ export default function Page() {
           className="object-cover"
         />
 
+        <div className="absolute inset-0 flex items-center justify-center z-20">
+          <div className="max-w-2xl mx-auto text-center">
+            <h1 className="text-[16dvh] font-signature">Daniel Bacsur</h1>
+          </div>
+        </div>
+
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black z-10" />
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
