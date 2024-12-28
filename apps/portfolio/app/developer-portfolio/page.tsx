@@ -5,17 +5,17 @@ import Link from "next/link";
 
 export const revalidate = 3600;
 
-const projects = getProjects().sort((a, b) => {
-  const endDateComparison =
-    new Date(b.endDate).getTime() - new Date(a.endDate).getTime();
-
-  if (endDateComparison !== 0) return endDateComparison;
-
-  return new Date(b.startDate).getTime() - new Date(a.startDate).getTime();
-});
-
 export default async function Developer() {
   const contributions = await getContributions();
+
+  const projects = getProjects().sort((a, b) => {
+    const endDateComparison =
+      new Date(b.endDate).getTime() - new Date(a.endDate).getTime();
+
+    if (endDateComparison !== 0) return endDateComparison;
+
+    return new Date(b.startDate).getTime() - new Date(a.startDate).getTime();
+  });
 
   return (
     <main className="px-8 py-24">
