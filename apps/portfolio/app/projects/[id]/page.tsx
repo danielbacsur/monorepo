@@ -4,6 +4,7 @@ import { ContributionCalendar } from "@/components/contribution-calendar";
 import { getContributions } from "@/utils/github";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Metadata } from "next";
+import { MasonryGallery } from "@/components/masonry-gallery";
 
 export const revalidate = 3600;
 export const dynamicParams = false;
@@ -76,7 +77,12 @@ export default async function ProjectPage({
         </section>
 
         <section className="markdown">
-          <MDXRemote source={project.content} />
+          <MDXRemote
+            source={project.content}
+            components={{
+              MasonryGallery,
+            }}
+          />
         </section>
       </div>
     </main>
