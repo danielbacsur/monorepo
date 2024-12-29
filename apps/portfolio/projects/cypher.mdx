@@ -1,0 +1,33 @@
+---
+id: cypher
+title: >
+  Designing a 1GHz Single Board Computer for Cybersecurity Purposes
+description: >
+  Cypher is a credit card-sized single-board computer with range-based lockdown, dynamic data encryption, and Git integration to secure sensitive data in high-risk environments.
+tags:
+  - Cybersecurity
+  - Single Board Computer
+  - Rust
+  - Linux
+  - iMX6ULL
+  - Altium Designer
+keywords:
+  - cybersecurity
+  - single board computer
+  - rust
+  - linux
+  - imx6ull
+  - altium designer
+  - cypher
+  - data security
+  - yocto project
+  - embedded systems
+startDate: 2023-01-03
+endDate: 2023-06-03
+---
+
+In an interconnected world, cybersecurity is a critical issue for individuals, businesses, and governments. From data breaches to ransomware attacks, the complexity of cyber threats continues to rise. Existing tools often fail to provide both robust security and convenience. Traditional data storage devices like USB drives lack active defenses against tampering or unauthorized access, posing significant risks for handling sensitive information. The challenge was to create a portable device that secures data dynamically while offering advanced features tailored for cybersecurity.
+
+The idea was to design a compact single-board computer (SBC) that could act as a secure hub for data storage and cybersecurity. Initial prototypes revealed challenges, including hardware limitations and redundancy risks due to smartphones’ prevalence. Through consultations with cybersecurity experts and hardware engineers, the design was refined to focus on dynamic data management and integrated security features. Leveraging the Yocto Project for a custom Linux-based operating system, we developed CyOS, optimized for embedded security.
+
+The result is Cypher Alpha, a card-sized SBC powered by a 1GHz processor. Measuring just 2mm thick, it combines portability with advanced security features. The device offers automatic encryption and decryption of data, dynamic storage allocation based on frequently accessed files, and versatile dual USB-C ports for monitoring data flows. Its most innovative feature is range-based lockdown: when a paired phone moves out of Bluetooth range, the device locks automatically. This capability can be extended to corporate environments—when an employee leaves the company building, all data on the device becomes inaccessible, ensuring sensitive information is protected from unauthorized access.
