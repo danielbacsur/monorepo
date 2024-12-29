@@ -5,6 +5,7 @@ import { getContributions } from "@/utils/github";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Metadata } from "next";
 import { MasonryGallery } from "@/components/masonry-gallery";
+import { YoutubeVideo } from "@/components/youtube-video";
 
 export const revalidate = 3600;
 export const dynamicParams = false;
@@ -81,6 +82,7 @@ export default async function ProjectPage({
             source={project.content}
             components={{
               MasonryGallery,
+              YoutubeVideo,
             }}
           />
         </section>
