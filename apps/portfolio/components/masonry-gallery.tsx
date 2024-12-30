@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export function MasonryGallery({
@@ -18,14 +19,21 @@ export function MasonryGallery({
       columnsArray[index % 2].push(image);
     });
     setColumns(columnsArray);
-  }, [images, 2]);
+  }, [images]);
 
   return (
     <div className="flex gap-4 my-8">
       {columns.map((column, i) => (
         <div key={i} className="flex flex-col gap-4 flex-1">
           {column.map((image, j) => (
-            <img key={j} className="w-full rounded-md" {...image} />
+            <Image
+              key={j}
+              width={480}
+              height={480}
+              src={image.src}
+              alt={image.alt}
+              className="w-full rounded-md"
+            />
           ))}
         </div>
       ))}
