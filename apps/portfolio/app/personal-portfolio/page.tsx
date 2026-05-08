@@ -5,7 +5,7 @@ import Balancer from "react-wrap-balancer";
 
 export default function Page() {
   const age = Math.floor(
-    (new Date().getTime() - new Date("2005-07-21").getTime()) / 31557600000
+    (new Date().getTime() - new Date("2005-07-21").getTime()) / 31557600000,
   );
 
   return (
@@ -14,6 +14,7 @@ export default function Page() {
         <Image
           src="/cypher-otio-live-demo.jpg"
           alt="Hero Banner"
+          sizes="100vw"
           fill
           style={{ objectPosition: "50% 20%" }}
           className="object-cover"

@@ -8,7 +8,7 @@ import { cn } from "@/utils/cn";
 export function AnimatedGallery({
   images,
 }: {
-  images: { src: string; description: string, focus: string }[];
+  images: { src: string; description: string; focus: string }[];
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
@@ -34,6 +34,7 @@ export function AnimatedGallery({
                   src={src}
                   alt={description}
                   fill
+                  sizes="(min-width: 1024px) 300px, (min-width: 640px) 50vw, 100vw"
                   className={cn("object-cover", focus)}
                 />
               </div>
